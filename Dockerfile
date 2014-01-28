@@ -7,6 +7,8 @@ RUN apt-get -y install php5-fpm php5-mysql php-apc php5-imagick php5-imap php5-m
 
 RUN echo "<?php phpinfo(); ?>" > /srv/www/phpinfo.php
 
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 ADD ./default /etc/nginx/sites-available/default
 
 EXPOSE 80
