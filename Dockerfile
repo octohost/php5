@@ -12,7 +12,3 @@ RUN echo "<?php phpinfo(); ?>" > /srv/www/phpinfo.php
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD ./default /etc/nginx/sites-available/default
-
-EXPOSE 80
-
-CMD service php5-fpm start && nginx
