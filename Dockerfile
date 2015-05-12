@@ -1,4 +1,4 @@
-FROM octohost/nginx:1.7
+FROM octohost/nginx:1.8
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys E5267A6C; \
     echo 'deb http://ppa.launchpad.net/ondrej/php5/ubuntu trusty main' > /etc/apt/sources.list.d/ondrej-php5-trusty.list; \
